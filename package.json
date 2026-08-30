@@ -1,0 +1,8 @@
+{
+  "name": "bookshop-cds",
+  "version": "1.0.0",
+  "description": "Bookshop CAP Java backend for UI5/Fiori training",
+  "devDependencies": {
+    "@sap/cds-dk": "^10"
+  }
+}
