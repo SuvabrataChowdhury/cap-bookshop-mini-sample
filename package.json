@@ -4,5 +4,8 @@
   "description": "Bookshop CAP Java backend for UI5/Fiori training",
   "devDependencies": {
     "@sap/cds-dk": "^10"
-  }
+  },
+  "sapux": [
+    "app/bookshop-fiori"
+  ]
 }
