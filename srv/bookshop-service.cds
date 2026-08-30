@@ -1,7 +1,7 @@
 using {my.bookshop as my} from '../db/index';
 
-@path: 'admin'
-service BooksService @(requires: 'any') {
+@path: 'bookshop'
+service BookshopService @(requires: 'any') {
 
   @odata.draft.enabled
   entity Books   as projection on my.Books;

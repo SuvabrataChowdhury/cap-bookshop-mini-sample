@@ -10,15 +10,15 @@ cloud-cap-samples-java/
 │   ├── books.cds          # Domain model: Books, Authors, Genres
 │   └── data/              # Sample CSV data
 └── srv/
-    ├── admin-service.cds  # BooksService - full CRUD at /api/admin
-    └── cat-service.cds    # CatalogService - read-only at /api/browse
+    ├── bookshop-service.cds  # BookshopService - full CRUD at /api/bookshop
+    └── cat-service.cds       # CatalogService - read-only at /api/browse
 ```
 
 ## Services
 
 | Service | Path | Description |
 |---------|------|-------------|
-| `BooksService` | `/api/admin` | Full CRUD + draft for Books, read-only Authors & Genres |
+| `BookshopService` | `/api/bookshop` | Full CRUD + draft for Books, read-only Authors & Genres |
 | `CatalogService` | `/api/browse` | Read-only Books and Authors |
 
 ## Running Locally
@@ -34,9 +34,9 @@ The server starts at `http://localhost:8080`.
 
 ### OData Endpoints
 
-- Books: `http://localhost:8080/api/admin/Books`
-- Authors: `http://localhost:8080/api/admin/Authors`
-- Genres: `http://localhost:8080/api/admin/Genres`
+- Books: `http://localhost:8080/api/bookshop/Books`
+- Authors: `http://localhost:8080/api/bookshop/Authors`
+- Genres: `http://localhost:8080/api/bookshop/Genres`
 
 ### H2 Database Console
 
@@ -52,6 +52,6 @@ To generate a Fiori Elements app against this backend:
 
 1. Run `npx fiori generate` (or use the SAP Fiori tools VS Code extension)
 2. Select **List Report Page** template
-3. Point to `http://localhost:8080/api/admin`
-4. Select `BooksService` → `Books` entity
+3. Point to `http://localhost:8080/api/bookshop`
+4. Select `BookshopService` → `Books` entity
 5. The annotations in `app/admin/fiori-service.cds` will be picked up automatically
