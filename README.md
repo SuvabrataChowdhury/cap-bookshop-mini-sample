@@ -9,12 +9,9 @@ cloud-cap-samples-java/
 ├── db/
 │   ├── books.cds          # Domain model: Books, Authors, Genres
 │   └── data/              # Sample CSV data
-├── srv/
-│   ├── admin-service.cds  # BooksService - full CRUD at /api/admin
-│   └── cat-service.cds    # CatalogService - read-only at /api/browse
-└── app/
-    └── admin/
-        └── fiori-service.cds  # Fiori annotations (List Report + Object Page)
+└── srv/
+    ├── admin-service.cds  # BooksService - full CRUD at /api/admin
+    └── cat-service.cds    # CatalogService - read-only at /api/browse
 ```
 
 ## Services
@@ -26,7 +23,10 @@ cloud-cap-samples-java/
 
 ## Running Locally
 
+After any changes to `.cds` files, rebuild first to regenerate the OData model:
+
 ```bash
+mvn clean package -DskipTests
 mvn spring-boot:run
 ```
 
